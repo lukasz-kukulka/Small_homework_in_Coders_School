@@ -4,7 +4,7 @@
 class Ship {
 
 public:
-    Ship();
+    Ship() = default;
     Ship(int8_t, std::string, uint8_t, uint8_t, uint8_t);
     Ship(int8_t, uint8_t, uint8_t);
 
@@ -14,7 +14,7 @@ public:
     uint8_t getMaxCrew() const { return maxCrew_; };
     uint8_t getCapacity() const { return capacity_; };
 private:
-    int8_t id_ { -1 };
+    const int8_t id_ { -1 };
     std::string name_ { };
     uint8_t speed_ { 50 };
     const uint8_t maxCrew_ { 100 };
