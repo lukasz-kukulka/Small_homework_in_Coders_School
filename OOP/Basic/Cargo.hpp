@@ -4,6 +4,8 @@
 class Cargo {
 public:
 
+    Cargo& operator+=(const uint16_t);
+
 
 private:
     const std::string name_ { }; 
