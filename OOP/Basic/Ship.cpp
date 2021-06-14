@@ -12,6 +12,11 @@ Ship::Ship(int8_t id, uint8_t speed, uint8_t maxCrew)
     : Ship(id, "Ship", speed, maxCrew, 100)
 {}
 
+Ship& Ship::operator+=(const int value){
+    crew_ += value;
+    return *this;
+}
+
 void Ship::setName(const std::string& name){
     name_ = name;
 }
