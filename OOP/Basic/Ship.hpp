@@ -9,6 +9,7 @@ public:
     Ship(int8_t, uint8_t, uint8_t);
 
     Ship& operator+=(const int);
+    Ship& operator-=(const int);
 
     int8_t getId() const { return id_; };
     std::string getName() const& { return name_; };

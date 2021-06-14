@@ -17,6 +17,11 @@ Ship& Ship::operator+=(const int value){
     return *this;
 }
 
+Ship& Ship::operator-=(const int value){
+    crew_ -= value;
+    return *this;
+}
+
 void Ship::setName(const std::string& name){
     name_ = name;
 }
