@@ -12,12 +12,12 @@ Ship::Ship(int8_t id, uint8_t speed, uint8_t maxCrew)
     : Ship(id, "Ship", speed, maxCrew, 100)
 {}
 
-Ship& Ship::operator+=(const int value){
+Ship& Ship::operator+=(const uint16_t value){
     crew_ += value;
     return *this;
 }
 
-Ship& Ship::operator-=(const int value){
+Ship& Ship::operator-=(const uint16_t value){
     crew_ -= value;
     return *this;
 }
