@@ -1,0 +1,3 @@
+/home/nanautzin/coders_school/Small_homework_in_Coders_School/TESTS/tests/build/CMakeFiles/rebuild_cache.dir
+/home/nanautzin/coders_school/Small_homework_in_Coders_School/TESTS/tests/build/CMakeFiles/edit_cache.dir
+/home/nanautzin/coders_school/Small_homework_in_Coders_School/TESTS/tests/build/CMakeFiles/tests_catch.dir
