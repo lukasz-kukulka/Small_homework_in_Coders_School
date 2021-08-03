@@ -73,10 +73,15 @@ int main() {
 
     int resultv6v7 = std::inner_product(v6.begin(), v6.end(), v7.begin(), 0);
     std::cout << "\n-------------------------------------------"<< resultv6v7 << "------------------------------------------- \n";
+
+
+    int resultv6v7ver2 = std::inner_product(v6.begin(), v6.end(), v7.begin(), 0,
+                            std::plus<>(), [&](auto a, auto b) { return b == 1 ? a : 0; });
+
+    std::cout << "\n-------------------------------------------"<< resultv6v7ver2 << "------------------------------------------- \n";
     return 0;
 }
 
-// Oblicz iloczyn skalarny wektorów v1 i v2
 // Oblicz sumę tych liczb z v1, które są na pozycjach dodatnich jedynek z wektora v2
 
 
