@@ -4,6 +4,9 @@
 #include <vector>
 #include <random>
 #include <iterator>
+#include <numeric>
+#include <array>
+#include <utility>
 
 int main() {
     constexpr auto size = 13;
@@ -48,5 +51,31 @@ int main() {
     std::copy(begin(v5), end(v5),
               std::ostream_iterator<int>(std::cout, " "));
     std::cout << "\n------------------------------------------------------------------- \n";
+    std::vector<int> v6 (1000);
+    std::iota(begin(v6), end(v6), 1);
+    auto sum = std::accumulate(begin(v6), end(v6), 0);
+    for (auto ele : v6) {
+        std::cout << ele << " ";
+    }
+    std::cout << "\n\n" << sum << "\n\n";
+    std::cout << "\n---------------------------------------------------------------------------------------------------------------------------------------- \n";
+    std::vector<int> v7 (1000, 0);
+    int c = -1;
+    std::exclusive_scan(std::next(v6.begin()), v6.end(), v7.begin(), -1, [&](auto a, auto b){ 
+                        b % 2 == 0 ? c = (b % 2) * (-1) : c = (b % 4) - 2; 
+                        return c; 
+        });
+
+    for (auto ele : v7) {
+        std::cout << ele << "  ";
+    }
+    std::cout << "\n---------------------------------------------------------------------------------------------------------------------------------------- \n";
     return 0;
 }
+
+// Oblicz iloczyn skalarny wektorów v1 i v2
+// Oblicz sumę tych liczb z v1, które są na pozycjach dodatnich jedynek z wektora v2
+
+
+
+
