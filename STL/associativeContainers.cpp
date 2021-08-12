@@ -16,5 +16,10 @@ int main() {
             std::cout << it->first << " | " << it->second << '\n';
         }
     }
+    for (const auto& [k, v] : map){
+        if (v.size() == 3) {
+            std::cout << k << " | " << v << '\n';
+        }
+    }
     return 0;
 }
