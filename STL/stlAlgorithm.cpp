@@ -82,8 +82,6 @@ int main() {
     return 0;
 }
 
-// Oblicz sumę tych liczb z v1, które są na pozycjach dodatnich jedynek z wektora v2
-
 
 
 
