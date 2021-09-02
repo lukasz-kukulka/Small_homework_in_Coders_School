@@ -64,5 +64,6 @@ int main() {
             std::cout << "Sydney coordinates = (" << k.y << " " << k.x << ")\n";
         }
     }
+    auto cos = cities2.contains("Sydney");
     return 0;
 }
